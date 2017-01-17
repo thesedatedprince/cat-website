@@ -1,0 +1,15 @@
+<% if @name_generator != nil %>
+<h1>'My name is <%=@name_generator %>'</h1>
+
+<div style = 'border: 2px dashed red'>
+<img src='http://bit.ly/1eze8aE'>
+</div>
+<% end %>
+<br>
+<% if @name_generator == nil %>
+<form method="POST" action="/named-cat">
+<div>
+ <input type="text" name="name" />
+</div>
+</form>
+<% end %>
